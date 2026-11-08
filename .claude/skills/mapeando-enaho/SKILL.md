@@ -4,7 +4,7 @@ description: Construye el mapa coroplético de la pobreza monetaria por departam
 ---
 # Mapa de la pobreza por departamento (ENAHO 2024)
 
-1. Trabaja desde `tarea_4/`. **Si no existe `salidas/hogares_2024.parquet`, usa primero la skill
+1. Trabaja desde la raíz del proyecto (la carpeta con `pyproject.toml`). **Si no existe `salidas/hogares_2024.parquet`, usa primero la skill
    `limpiando-enaho`** y comprueba que `salidas/validacion.txt` diga `VÁLIDA`.
 2. Si falta `datos/peru_departamental_simple.geojson`, corre `uv run python scripts/descargar_datos.py`.
 3. Corre exactamente:

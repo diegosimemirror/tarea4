@@ -9,7 +9,7 @@ Basado en evaluar.py de la sesión 04. Cada pregunta se hace en una sesión nuev
 
 Modo A: sin MCP ni Skills ni herramientas (solo la respuesta estructurada), en una carpeta vacía fuera del
         repositorio: no puede leer archivos con respuestas ya calculadas.
-Modo B: en tarea_4/, con el MCP del BCRP (.mcp.json) y las Skills del proyecto, más Bash, Read, Glob, Grep y
+Modo B: en la raíz del proyecto, con el MCP del BCRP (.mcp.json) y las Skills del proyecto, más Bash, Read, Glob, Grep y
         Skill para correrlas. En ambos: sin WebSearch ni WebFetch, y --strict-mcp-config (ningún otro MCP).
 """
 # ── Paquetes ─────────────────────────────────────────────────────────────────────────────────
@@ -24,7 +24,7 @@ from pathlib import Path
 
 import pandas as pd
 
-RAIZ = Path(__file__).resolve().parent.parent          # tarea_4/
+RAIZ = Path(__file__).resolve().parent.parent          # raíz del proyecto
 EVID = RAIZ / "evidencias_ia" / "evaluacion"
 ESQUEMA = {"type": "object", "required": ["valor", "fuente"],
            "properties": {"valor": {"type": ["number", "null"]}, "unidad": {"type": "string"},

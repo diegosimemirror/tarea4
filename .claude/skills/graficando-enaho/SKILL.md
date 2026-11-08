@@ -5,7 +5,7 @@ argument-hint: [area | sexo | hogares | departamentos | todos]
 ---
 # Graficar la pobreza con la ENAHO 2024
 
-1. Trabaja desde `tarea_4/`. **Si no existe `salidas/hogares_2024.parquet` o `salidas/personas_2024.parquet`, usa
+1. Trabaja desde la raíz del proyecto (la carpeta con `pyproject.toml`). **Si no existe `salidas/hogares_2024.parquet` o `salidas/personas_2024.parquet`, usa
    primero la skill `limpiando-enaho`** y comprueba que `salidas/validacion.txt` diga `VÁLIDA`.
 2. Elige el gráfico según el pedido y corre exactamente:
    ```bash

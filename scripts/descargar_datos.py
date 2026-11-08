@@ -1,6 +1,6 @@
 """Baja a datos/ los archivos oficiales que el proyecto no sube a Git.
 
-    uv run python scripts/descargar_datos.py        # desde tarea_4/
+    uv run python scripts/descargar_datos.py        # desde la raíz del proyecto
 """
 import sys
 from pathlib import Path

@@ -1,6 +1,6 @@
 """Limpia la ENAHO 2024 (módulos 34 y 02), une personas y hogares, construye indicadores y valida.
 
-    uv run python .claude/skills/limpiando-enaho/scripts/limpiar.py            # desde la carpeta tarea_4/
+    uv run python .claude/skills/limpiando-enaho/scripts/limpiar.py            # desde la raíz del proyecto
 
 Entra:  datos/966-Modulo34.zip y datos/966-Modulo02.zip (INEI, código 966 = ENAHO 2024)
 Sale:   salidas/personas_2024.parquet, salidas/hogares_2024.parquet,

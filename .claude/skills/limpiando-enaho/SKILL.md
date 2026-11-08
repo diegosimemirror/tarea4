@@ -4,7 +4,7 @@ description: Limpia y valida la ENAHO 2024 del INEI (módulo 34 sumaria y módul
 ---
 # Limpiar y validar la ENAHO 2024
 
-1. Trabaja desde la carpeta `tarea_4/`. Si faltan `datos/966-Modulo34.zip` o `datos/966-Modulo02.zip`,
+1. Trabaja desde la raíz del proyecto (la carpeta con `pyproject.toml`). Si faltan `datos/966-Modulo34.zip` o `datos/966-Modulo02.zip`,
    corre `uv run python scripts/descargar_datos.py`; si no hay internet, pide al usuario bajarlos del INEI.
 2. Corre exactamente:
    ```bash

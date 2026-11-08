@@ -5,8 +5,12 @@ transferencia de Juntos y cuánto subieron los alimentos frente al resto de prec
 qué hogares se concentra la pobreza monetaria en 2024 (ENAHO 2024).
 
 Informe: [`informes/informe_final.md`](informes/informe_final.md) · Sitio web con los resultados:
-<https://diegosimemirror.github.io/Python-Intermedio-QLAB/tarea_4/> (sección 13) · Enunciado: issue #201 de
+<https://diegosimemirror.github.io/tarea4/> (sección 13) · Enunciado: issue #201 de
 [d2cml-ai/Data-Science-Python](https://github.com/d2cml-ai/Data-Science-Python/issues/201).
+
+> **Origen.** El proyecto se desarrolló en la carpeta `tarea_4/` del repositorio del curso y se trasladó aquí con
+> todo su historial (`git subtree split`). Las rutas `.../tarea_4/...` que aparecen en los registros de
+> `evidencias_ia/` y en el informe corresponden a la raíz de este repositorio.
 
 ## 1. Objetivo
 
@@ -83,8 +87,8 @@ diferencia máxima con la referencia departamental de la sesión 16: 0,05 puntos
 ## 6. Instalación con `uv`
 
 ```bash
-git clone https://github.com/diegosimemirror/Python-Intermedio-QLAB
-cd Python-Intermedio-QLAB/tarea_4
+git clone https://github.com/diegosimemirror/tarea4
+cd tarea4
 uv sync                                   # Python ≥ 3.11 con fastmcp, pandas, pyarrow, geopandas, matplotlib, pytest
 uv run python scripts/descargar_datos.py  # ENAHO 2024 (módulos 34 y 02) y GeoJSON en datos/
 ```
@@ -92,7 +96,7 @@ uv run python scripts/descargar_datos.py  # ENAHO 2024 (módulos 34 y 02) y GeoJ
 ## 7. Conectar el MCP a Claude Code
 
 El archivo [`.mcp.json`](.mcp.json) ya registra el servidor (equivale a
-`claude mcp add --scope project bcrp -- uv run python mcp/server.py`). Abran Claude Code en `tarea_4/`, aprueben el
+`claude mcp add --scope project bcrp -- uv run python mcp/server.py`). Abran Claude Code en la carpeta del repositorio, aprueben el
 servidor `bcrp` y revisen con `/mcp`. Las Skills se cargan solas desde `.claude/skills/` (véanlas con `/skills`).
 
 ## 8. Reproducir
@@ -115,7 +119,7 @@ uv run python scripts/construir_sitio.py                              # datos de
 ## 9. Resultados de la evaluación
 
 Mismas 10 preguntas (4 BCRP, 4 ENAHO, 2 mixtas), cada una en una sesión nueva de `claude -p` con Claude Sonnet 5.5,
-respuestas esperadas fijadas en Git antes de evaluar (commit `08a323e`). Detalle en
+respuestas esperadas fijadas en Git antes de evaluar (commit `bb4af11`). Detalle en
 [`evaluacion/comparacion.md`](evaluacion/comparacion.md) y [`evaluacion/resultados.csv`](evaluacion/resultados.csv).
 
 | | Sin MCP ni Skills (A) | Con MCP y Skills (B) |
@@ -177,7 +181,7 @@ Todo se desarrolló con Claude Code. Ver [`evidencias_ia/`](evidencias_ia/):
 ## 13. Sitio web (complemento opcional)
 
 Un tablero para explorar los resultados, que es una de las ideas de innovación del enunciado. Se publica con GitHub
-Pages en <https://diegosimemirror.github.io/Python-Intermedio-QLAB/tarea_4/>. No lo escribió el agente: se hizo en la
+Pages en <https://diegosimemirror.github.io/tarea4/>. No lo escribió el agente: se hizo en la
 sesión de desarrollo, después de la ejecución integrada. Usa solo salidas que ya existen, así que no agrega cifras
 nuevas.
 
@@ -188,7 +192,7 @@ nuevas.
 | `sitio/graficos.js`, `sitio/estilo.css` | gráficos en SVG sin librerías (tooltip, mapa enlazado con las barras, calculadora de valor real) y estilos con modo claro y oscuro |
 | `sitio/datos.js` | datos de los gráficos; lo genera `scripts/construir_sitio.py` |
 | `scripts/construir_sitio.py` | pide el IPC al servidor MCP (`serie`), lee `salidas/` y `evaluacion/resultados.csv`, simplifica el GeoJSON a trazos SVG, convierte el informe y copia las figuras |
-| `../.github/workflows/sitio-tarea4.yml` | publica `sitio/` en GitHub Pages cuando cambia en `main`. Está en la raíz del repositorio porque GitHub solo lee los flujos de trabajo de ahí |
+| `.github/workflows/sitio.yml` | publica `sitio/` en GitHub Pages cada vez que cambia en `main` |
 
 La calculadora repite en el navegador la cuenta de `valor_real` (`monto × IPC[dic-2006] / IPC[mes]`) con las mismas
 series. Agrega una tercera medida: la canasta de un hogar pobre, con la participación de alimentos de la ENAHO

@@ -4,7 +4,7 @@ Las mismas 10 preguntas ([`preguntas.csv`](preguntas.csv): 4 del BCRP, 4 de la E
 una en una sesión nueva de `claude -p`, con el mismo modelo (Claude Sonnet 5.5), la misma instrucción y la misma
 tolerancia. Las respuestas esperadas se calcularon antes de evaluar con un camino independiente
 ([`verificacion_independiente.py`](verificacion_independiente.py): lee los `.dta` y la API del BCRP sin el servidor ni
-las Skills) y se guardaron en Git en el commit `08a323e`, antes de la primera corrida. Detalle por pregunta:
+las Skills) y se guardaron en Git en el commit `bb4af11`, antes de la primera corrida. Detalle por pregunta:
 [`resultados.csv`](resultados.csv). Salida completa de cada corrida (stream-json): `evidencias_ia/evaluacion/`.
 
 ## Condiciones

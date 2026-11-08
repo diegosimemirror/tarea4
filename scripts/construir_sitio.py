@@ -27,7 +27,7 @@ import pandas as pd    # lee los CSV de salida
 
 RAIZ = Path(__file__).resolve().parents[1]
 SITIO = RAIZ / "sitio"
-REPO = "https://github.com/diegosimemirror/Python-Intermedio-QLAB/blob/main/tarea_4"
+REPO = "https://github.com/diegosimemirror/tarea4/blob/main"
 
 sys.path.insert(0, str(RAIZ / "mcp"))
 from fastmcp import Client                  # cliente MCP en el mismo proceso, igual que en cruce_y_contraste.py

@@ -1,6 +1,6 @@
 """Respuestas esperadas de las 10 preguntas, calculadas SIN el servidor MCP ni las Skills.
 
-    uv run python evaluacion/verificacion_independiente.py      # desde tarea_4/
+    uv run python evaluacion/verificacion_independiente.py      # desde la raíz del proyecto
 
 Lee la ENAHO directamente de los .dta del INEI y las series directamente de la API del BCRP (otro código,
 otro camino). Escribe evaluacion/respuestas_esperadas.csv. Se corrió y se guardó en Git ANTES de evaluar.

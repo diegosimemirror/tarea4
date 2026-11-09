@@ -15,6 +15,8 @@ REGLAS = [
     ("token", re.compile(r"\b(?:ghp|gho|sk-ant|sk|xox[bp])[-_][A-Za-z0-9_-]{16,}\b"), "[token oculto]"),
     ("ruta de usuario", re.compile(r"C:[\\/]+Users[\\/]+(?:Diego Sime|DIEGOS~1)", re.I), r"C:\\Users\\[usuario]"),
     ("ruta de usuario", re.compile(r"/c/Users/(?:Diego Sime|DIEGOS~1)", re.I), "/c/Users/[usuario]"),
+    # la carpeta de memoria de Claude Code escribe la ruta con guiones: C--Users-Diego-Sime-AppData-…
+    ("ruta de usuario", re.compile(r"Users-Diego-Sime", re.I), "Users-[usuario]"),
 ]
 # Términos de otros trabajos del autor: se leen de un archivo local que no se sube a Git (scripts/ocultar_local.txt,
 # un término por línea), para no publicar la lista misma.

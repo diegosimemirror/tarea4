@@ -71,6 +71,12 @@ Validación obtenida ([`salidas/validacion.txt`](salidas/validacion.txt)): pobre
 personas), **108 664** residentes, **25/25** departamentos, urbana 24,81 %, rural 39,30 %, unión 108 664 → 108 664,
 diferencia máxima con la referencia departamental de la sesión 16: 0,05 puntos.
 
+**Coordinación.** `graficando-enaho` y `mapeando-enaho` revisan si existe la base limpia y, si falta, usan primero
+`limpiando-enaho`. Se probó en una copia limpia del repositorio con solo los zip del INEI: ante «Haz un mapa de la
+pobreza monetaria por departamento con ENAHO 2024.», el agente activó `mapeando-enaho`, vio que faltaba
+`salidas/hogares_2024.parquet`, activó `limpiando-enaho`, comprobó `VÁLIDA` y recién entonces hizo el mapa (53 s).
+Registro: [`evidencias_ia/skills/coordinacion_skills.md`](evidencias_ia/skills/coordinacion_skills.md).
+
 ## 5. Fuentes y datos
 
 | Fuente | Archivo | Enlace |
@@ -174,7 +180,8 @@ Todo se desarrolló con Claude Code. Ver [`evidencias_ia/`](evidencias_ia/):
 
 - [`conversacion_desarrollo.md`](evidencias_ia/conversacion_desarrollo.md): la conversación completa, desde la
   lectura del enunciado hasta la entrega, con los datos sensibles ocultos (`scripts/copiar_evidencias.py`).
-- `mcp/` y `skills/`: guía de dónde está cada parte del desarrollo y sus correcciones.
+- `mcp/` y `skills/`: guía de dónde está cada parte del desarrollo y sus correcciones; `skills/` trae además la
+  prueba de coordinación entre Skills (`coordinacion_skills.md`).
 - `integracion/`: la ejecución del agente con MCP y Skills.
 - `evaluacion/`: las 20 corridas del experimento A/B.
 
